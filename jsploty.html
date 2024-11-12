@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+        <div id="myplot" style="width:100%; max-width:700px"></div>
+
+        <script>
+            const xArray = ["Indonesia", "Jepang", "Korea", "Rusia"];
+            const yArray = [99, 80, 87, 52];
+
+            const data = [{
+                labels: xArray,
+                values: yArray,
+                // type pie untuk diagram lingkaran disertai labels dan values nya juga bukan x, y.
+                // Kalo x,y itu utnuk type nya bar utnuk diagram batang
+                type: "pie",
+                orientation: "v",
+                marker: {color: "rgba(0,0,255,0.6)"}
+            }];
+
+            const layout = {title: "Data penduduk tertamvan didunia :p"}
+
+            Plotly.newPlot("myplot", data, layout);
+        </script>
+
+</body>
+</html>
